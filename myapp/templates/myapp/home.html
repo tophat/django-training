@@ -1,0 +1,31 @@
+{% extends "myapp/base.html" %}
+
+{% block content %}
+    <div class="container">
+
+        <!-- Show this section only for User Items view -->
+        {% if first_name or last_name %}
+            <div class="jumbotron">
+                <h1>{{ first_name }} {{ last_name }} - My App</h1>
+            </div>
+        {% endif %}
+
+        <!-- Pagination -->
+        <div class="pagination">
+            {% if items.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ items.previous_page_number }}">previous</a>
+            {% endif %}
+
+            {% if items.paginator.num_pages != 1 %}
+                Page {{ items.number }} of {{ items.paginator.num_pages }}.
+            {% endif %}
+
+            {% if items.has_next %}
+                <a href="?page={{ items.next_page_number }}">next</a>
+                <a href="?page={{ items.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </div>
+
+    </div>
+{% endblock content %}

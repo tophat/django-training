@@ -1,0 +1,81 @@
+<!-- this is base template with navbar and footer -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Django My App</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          rel="stylesheet" media="screen"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/main.css' %}"/>
+
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'myapp:home' %}">My App</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse navbar-right">
+            <!-- show registration only if user is not yet authenticated -->
+            {% if not user.is_authenticated %}
+                <ul class="nav navbar-nav ">
+                    <li class="active"><a href="{% url 'register' %}">Registration</a></li>
+                </ul>
+            {% endif %}
+            <!-- show login only if user is not yet authenticated -->
+            {% if not user.is_authenticated %}
+                <ul class="nav navbar-nav ">
+                    <li class="active"><a href="{% url 'login' %}">Login</a></li>
+                </ul>
+            {% endif %}
+            <!-- show sign out only if user is authenticated -->
+            {% if user.is_authenticated %}
+                <ul class="nav navbar-nav ">
+                    <li class="active"><a href="{% url 'logout' %}">Sign Out</a></li>
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+
+<hr>
+
+<!-- footer -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <!-- Logged user info -->
+            {% if user.is_authenticated %}
+                <p class="text-center">
+                    | Logged user: {{ user.username }}
+                    | Email: {{ user.email }}
+                    | Admin:{{ user.is_superuser }}
+                    | <a href="{% url 'logout' %}">Sign Out</a>
+                </p>
+            {% endif %}
+
+            <div>
+                <p class="text-center">&copy; 2017 Dusan Reljic</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+</div>
+
+</body>
+</html>
