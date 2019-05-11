@@ -13,6 +13,6 @@ def test_get_professor_names(django_assert_num_queries):
             subject=Subject.objects.create(name="Chemistry"),
         ).authors.add(prof)
 
-    with django_assert_num_queries(1):
+    with django_assert_num_queries(2):
         profs = get_all_professor_names()
         assert len(profs) == expected_num_textbooks
