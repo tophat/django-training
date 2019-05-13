@@ -3,6 +3,7 @@ import pytest
 from exercises.models import Textbook, Professor, Subject
 from exercises.exercise_2.use_cases import get_all_professor_names
 
+
 @pytest.mark.django_db()
 def test_get_professor_names(django_assert_num_queries):
     expected_num_textbooks = 10

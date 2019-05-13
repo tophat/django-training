@@ -1,5 +1,6 @@
 from exercises.models import Textbook
 
+
 def get_all_subjects():
     subjects = []
     for textbook in Textbook.objects.all():
