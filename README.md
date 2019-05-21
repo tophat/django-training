@@ -7,7 +7,7 @@ All web apps need persist and retrieve data to be useful. You can use django-orm
 
 ## How to run
 
-- Run `. script/bootstrap` to initialize dependencies and virtualenv
+- Run `. script/bootstrap` to initialize dependencies and virtualenv (see more https://github.com/github/scripts-to-rule-them-all)
 - Run fix the implementation in `exercises/exercise_*/use_cases.py`
 - Run `make exercise_*` to verify that the fix was made
 
