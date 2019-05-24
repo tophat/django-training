@@ -21,3 +21,7 @@ exercise_5:
 .PHONY: exercise_6
 exercise_6:
 	pytest -k test_get_professor
+
+.PHONY: exercise_7
+exercise_7:
+	pytest -k test_get_professors
