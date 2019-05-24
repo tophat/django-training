@@ -17,3 +17,7 @@ exercise_4:
 .PHONY: exercise_5
 exercise_5:
 	pytest -k test_update_professor_ages
+
+.PHONY: exercise_6
+exercise_6:
+	pytest -k test_get_professor
