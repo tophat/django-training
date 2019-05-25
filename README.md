@@ -1,15 +1,16 @@
 # Django Training
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-## Purpose
+All web apps need persist and retrieve data to be useful. You can use Django-ORM to access and update your persisted data. The business of retrieving and storing data can be done in multiple ways. This is a training module to help you determine which is the best way.
 
-All web apps need persist and retrieve data to be useful. You can use django-orm as an interface to access and update your persisted application data. The business of retrieving and storing data can be done in multiple ways, some better than others. Inefficient implementations can cause a single user to use up 60% of the database on a single request. We don't like that. This is a training module to help you avoid common pitfalls.
 
-## How to run
-
+## Getting started
+- Clone this repo
 - Run `. script/bootstrap` to initialize dependencies and virtualenv (see more https://github.com/github/scripts-to-rule-them-all)
-- Run fix the implementation in `exercises/exercise_*/use_cases.py`
-- Run `make exercise_*` to verify that the fix was made
+- Go to one of the exercises, eg `cd exercise/exercise_1`
+- Run the test to see what was expected, eg `inv test -e1`
+- Fix the implementation, eg `vim exercise/exercise_1/use_cases.py`
+- Run the test to verify your solution, eg `inv test -e1`
+
 
 ## Contributors
 
