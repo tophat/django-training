@@ -1,7 +1,8 @@
 # Django Training
 
-All web apps need persist and retrieve data to be useful. You can use Django-ORM to access and update your persisted data. The business of retrieving and storing data can be done in multiple ways. This is a training module to help you determine which is the best way.
+All web apps need persist and retrieve data to be useful. You can use Django-[ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) to access and update your persisted data. The business of retrieving and storing data can be done in multiple ways, some better than others.
 
+Reading through https://docs.djangoproject.com/en/2.2/topics/db/optimization/ is a good first step. This is training module contains exercises to help solidify the learnings.
 
 ## Getting started
 - Clone this repo
