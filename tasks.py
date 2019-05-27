@@ -18,7 +18,32 @@ def get_test(exercise):
         return "test_get_professors"
 
 
-@task
-def test(ctx, exercise=1):
-    test_name = get_test(exercise)
-    ctx.run("pytest -v -k {}".format(test_name), pty=True)
+def get_hint(exercise):
+    if (exercise == 0):
+        return "https://docs.djangoproject.com/en/2.1/ref/models/querysets/#select-related"
+    elif(exercise == 1):
+        return "https://docs.djangoproject.com/en/2.2/ref/models/querysets/#prefetch-related"
+    elif(exercise == 2):
+        return "https://docs.djangoproject.com/en/2.2/ref/models/querysets/#update"
+    elif(exercise == 3):
+        return "https://docs.djangoproject.com/en/2.2/ref/models/querysets/#bulk-create"
+    elif(exercise == 4):
+        return "https://docs.djangoproject.com/en/2.2/ref/models/expressions/#f-expressions"
+    elif(exercise == 5):
+        return "https://docs.djangoproject.com/en/2.2/ref/models/options/#django.db.models.Options.indexes"
+    elif(exercise == 6):
+        return "https://docs.djangoproject.com/en/2.1/ref/models/querysets/#in"
+
+
+@task(
+    help={
+        "exercise": "number of which exercise folder is being attempted",
+        "hint": "show hint for exercise"
+    }
+)
+def test(ctx, exercise=1, hint=False):
+    if hint:
+        ctx.run("echo See documentation: {}".format(get_hint(exercise)), pty=True)
+        return
+
+    ctx.run("pytest -v -k {}".format(get_test(exercise)), pty=True)
