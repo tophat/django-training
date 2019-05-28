@@ -4,7 +4,7 @@ from exercises.models import Textbook, Professor, Subject
 from exercises.exercise_3.use_cases import remove_pii
 
 
-@pytest.fixture()
+@pytest.fixture
 def textbooks():
     expected_num_textbooks = 3
     for i in range(expected_num_textbooks):
