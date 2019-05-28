@@ -19,6 +19,6 @@ def textbooks():
 def test_remove_pii(django_assert_num_queries, textbooks):
     with django_assert_num_queries(1):
         remove_pii()
-    for prof in Professor.object.all():
+    for prof in Professor.objects.all():
         assert prof.first_name == "REDACTED"
         assert prof.last_name == "REDACTED"
