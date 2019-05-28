@@ -1,8 +1,9 @@
 from exercises.models import Textbook
 
 
-def get_all_subjects():
-    subjects = []
-    for textbook in Textbook.objects.all():
-        subjects.append(textbook.subject.name)
-    return subjects
+def get_textbook_subject(textbook_id) -> str:
+    """
+    :param textbook_id: Specifies which textbook to lookup
+    :return: Get the subject of a textbook
+    """
+    return Textbook.objects.get(id=textbook_id).subject.name
