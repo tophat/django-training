@@ -8,10 +8,10 @@ Reading through https://docs.djangoproject.com/en/2.2/topics/db/optimization/ is
 - Clone this repo
 - Run `. script/bootstrap` to initialize dependencies and virtualenv (see more https://github.com/github/scripts-to-rule-them-all)
 - Go to one of the exercises, eg `cd exercise/exercise_1`
-- Run the test to see what was expected, eg `inv test --exercise=1` or `inv test -e1`
+- Run the test to see what was expected, eg `inv test --exercise=1` or `inv test 1`
 - Fix the implementation, eg `goto exercise/exercise_1/use_cases.py`
-- For a reference to documentation that will help you solve the question use `inv test -e1 --hint`
-- Run the test to verify your solution, eg `inv test -e1`
+- For a reference to documentation that will help you solve the question use `inv test 1 --hint`
+- Run the test to verify your solution, eg `inv test 1`
 
 
 ## Contributors
