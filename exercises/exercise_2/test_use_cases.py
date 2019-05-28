@@ -1,3 +1,5 @@
+from typing import List
+
 import pytest
 
 from exercises.models import Textbook, Professor, Subject
@@ -5,15 +7,17 @@ from exercises.exercise_2.use_cases import get_authors
 
 
 @pytest.fixture
-def textbooks():
+def names() -> List[str]:
+    return ["Racuul", "Rif", "Sora"]
+
+
+@pytest.fixture
+def textbooks(names) -> List[Textbook]:
     textbooks = []
-    for i in range(3):
-        prof = Professor.objects.create(
-            first_name=f"Jacob the {i}",
-            last_name="Isaac",
-        )
+    for name in names:
+        prof = Professor.objects.create(first_name=name, last_name="Isaac")
         textbook = Textbook.objects.create(
-            title=f"General Chemistry {i}",
+            title=f"General Chemistry",
             subject=Subject.objects.create(name="Chemistry"),
         )
         textbook.authors.add(prof)
@@ -22,7 +26,8 @@ def textbooks():
 
 
 @pytest.mark.django_db()
-def test_get_authors(django_assert_num_queries, textbooks):
+def test_get_authors(django_assert_num_queries, textbooks, names):
     with django_assert_num_queries(2):
-        profs = get_authors([t.id for t in textbooks])
-        assert len(profs) == len(textbooks)
+        profs_names = get_authors([t.id for t in textbooks])
+        assert len(profs_names) == len(textbooks)
+        assert profs_names == names
