@@ -12,7 +12,7 @@ def ages():
 @pytest.fixture
 def profs(ages):
     for age in ages:
-        Professor.object.create(first_name="T", last_name="Mr", age=age)
+        Professor.objects.create(first_name="T", last_name="Mr", age=age)
 
 
 @pytest.mark.django_db()

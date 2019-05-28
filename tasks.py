@@ -2,19 +2,19 @@ from invoke import run, task
 
 
 def get_hint(exercise):
-    if (exercise == "0"):
+    if (exercise == "1"):
         return "https://docs.djangoproject.com/en/2.1/ref/models/querysets/#select-related"
-    elif(exercise == "1"):
-        return "https://docs.djangoproject.com/en/2.2/ref/models/querysets/#prefetch-related"
     elif(exercise == "2"):
-        return "https://docs.djangoproject.com/en/2.2/ref/models/querysets/#update"
+        return "https://docs.djangoproject.com/en/2.2/ref/models/querysets/#prefetch-related"
     elif(exercise == "3"):
-        return "https://docs.djangoproject.com/en/2.2/ref/models/querysets/#bulk-create"
+        return "https://docs.djangoproject.com/en/2.2/ref/models/querysets/#update"
     elif(exercise == "4"):
-        return "https://docs.djangoproject.com/en/2.2/ref/models/expressions/#f-expressions"
+        return "https://docs.djangoproject.com/en/2.2/ref/models/querysets/#bulk-create"
     elif(exercise == "5"):
-        return "https://docs.djangoproject.com/en/2.2/ref/models/options/#django.db.models.Options.indexes"
+        return "https://docs.djangoproject.com/en/2.2/ref/models/expressions/#f-expressions"
     elif(exercise == "6"):
+        return "https://docs.djangoproject.com/en/2.2/ref/models/options/#django.db.models.Options.indexes"
+    elif(exercise == "7"):
         return "https://docs.djangoproject.com/en/2.1/ref/models/querysets/#in"
 
 
