@@ -4,6 +4,10 @@ from exercises.models import Professor
 
 
 def get_professors(ids: List[int]) -> List[Professor]:
+    """
+    :param ids: Specified professors
+    :return: Get a list of Professors by id
+    """
     profs = []
     for prof_id in ids:
         try:
