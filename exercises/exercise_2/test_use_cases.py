@@ -1,19 +1,33 @@
+from typing import List
+
 import pytest
 
 from exercises.models import Textbook, Professor, Subject
-from exercises.exercise_2.use_cases import get_all_professor_names
+from exercises.exercise_2.use_cases import get_authors
+
+
+@pytest.fixture
+def names() -> List[str]:
+    return ["Racuul", "Rif", "Sora"]
+
+
+@pytest.fixture
+def textbooks(names) -> List[Textbook]:
+    textbooks = []
+    for name in names:
+        prof = Professor.objects.create(first_name=name, last_name="Isaac")
+        textbook = Textbook.objects.create(
+            title=f"General Chemistry",
+            subject=Subject.objects.create(name="Chemistry"),
+        )
+        textbook.authors.add(prof)
+        textbooks.append(textbook)
+    return textbooks
 
 
 @pytest.mark.django_db()
-def test_get_professor_names(django_assert_num_queries):
-    expected_num_textbooks = 10
-    for i in range(expected_num_textbooks):
-        prof = Professor.objects.create(first_name=f"Jacob the {i}", last_name="Isaac")
-        Textbook.objects.create(
-            title=f"General Chemistry {i}",
-            subject=Subject.objects.create(name="Chemistry"),
-        ).authors.add(prof)
-
+def test_get_authors(django_assert_num_queries, textbooks, names):
     with django_assert_num_queries(2):
-        profs = get_all_professor_names()
-        assert len(profs) == expected_num_textbooks
+        profs_names = get_authors([t.id for t in textbooks])
+        assert len(profs_names) == len(textbooks)
+        assert profs_names == names
