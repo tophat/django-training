@@ -17,8 +17,7 @@ def textbooks(names) -> List[Textbook]:
     for name in names:
         prof = Professor.objects.create(first_name=name, last_name="Isaac")
         textbook = Textbook.objects.create(
-            title=f"General Chemistry",
-            subject=Subject.objects.create(name="Chemistry"),
+            title=f"General Chemistry", subject=Subject.objects.create(name="Chemistry")
         )
         textbook.authors.add(prof)
         textbooks.append(textbook)

@@ -12,10 +12,7 @@ def subject():
 @pytest.fixture
 def textbook(subject) -> Textbook:
     prof = Professor.objects.create(first_name="Bhil", last_name="Isaac")
-    textbook = Textbook.objects.create(
-        title=f"General Chemistry",
-        subject=subject,
-    )
+    textbook = Textbook.objects.create(title=f"General Chemistry", subject=subject)
     textbook.authors.add(prof)
     return textbook
 
