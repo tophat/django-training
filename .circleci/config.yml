@@ -27,14 +27,6 @@ jobs:
             - run: echo "source ./django-training.venv/bin/activate" > $BASH_ENV
             - run: inv lint
 
-    test:
-        working_directory: ~/repo
-        docker:
-            - image: circleci/node:latest
-        steps:
-            - checkout
-            - run: echo "Full coverage or bust!"
-
 workflows:
     version: 2
     build_test_lint:
@@ -43,4 +35,3 @@ workflows:
             - lint:
                 requires:
                     - install
-            - test
