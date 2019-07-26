@@ -7,7 +7,7 @@ jobs:
             - image: circleci/python:3.6
         steps:
             - checkout
-            - run: python -m virtualenv venv --python=python3
+            - run: python -m virtualenv django-training.venv --python=python3
             - run: echo "source ./django-training.venv/bin/activate" > $BASH_ENV
             - restore_cache:
                 key: deps-pip3-{{ .Branch }}-{{ checksum "requirements.txt" }}
