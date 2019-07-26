@@ -6,11 +6,7 @@ from exercises.models import Professor
 
 @pytest.mark.django_db()
 def test_add_new_professors(django_assert_num_queries):
-    expected_names = [
-        ("Steve", "Pezos"),
-        ("Charlies", "Xavier"),
-        ("Samuel", "Oak")
-    ]
+    expected_names = [("Steve", "Pezos"), ("Charlies", "Xavier"), ("Samuel", "Oak")]
     with django_assert_num_queries(1):
         add_new_professors(expected_names)
     for names, prof in zip(expected_names, Professor.objects.all()):
