@@ -13,6 +13,14 @@ Reading through https://docs.djangoproject.com/en/2.2/topics/db/optimization/ is
 - For a reference to documentation that will help you solve the question use `inv test 1 --hint`
 - Run the test to verify your solution, eg `inv test 1`
 
+## Contributing
+
+The following invoke commands are available when contributing to this project:
+
+|Command|Description|
+|---|---|
+|`lint`|Lint checks everything, does not reformat files|
+|`format`|Fixes formatting for all python files|
 
 ## Contributors
 
@@ -20,7 +28,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://github.com/sjoanes"><img src="https://avatars3.githubusercontent.com/u/5768264?v=4" width="100px;" alt="sjoanes"/><br /><sub><b>sjoanes</b></sub></a><br /><a href="https://github.com/tophat/django-training/commits?author=sjoanes" title="Code">💻</a> <a href="#ideas-sjoanes" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/tophat/django-training/commits?author=sjoanes" title="Documentation">📖</a></td></tr></table>
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/sjoanes"><img src="https://avatars3.githubusercontent.com/u/5768264?v=4" width="100px;" alt="sjoanes"/><br /><sub><b>sjoanes</b></sub></a><br /><a href="https://github.com/tophat/django-training/commits?author=sjoanes" title="Code">💻</a> <a href="#ideas-sjoanes" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/tophat/django-training/commits?author=sjoanes" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://mcataford.github.io"><img src="https://avatars2.githubusercontent.com/u/6210361?v=4" width="100px;" alt="Marc Cataford"/><br /><sub><b>Marc Cataford</b></sub></a><br /><a href="#infra-mcataford" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/tophat/django-training/commits?author=mcataford" title="Documentation">📖</a></td>
+  </tr>
+</table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
