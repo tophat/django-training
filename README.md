@@ -13,6 +13,14 @@ Reading through https://docs.djangoproject.com/en/2.2/topics/db/optimization/ is
 - For a reference to documentation that will help you solve the question use `inv test 1 --hint`
 - Run the test to verify your solution, eg `inv test 1`
 
+## Contributing
+
+The following invoke commands are available when contributing to this project:
+
+|Command|Description|
+|---|---|
+|`lint`|Lint checks everything, does not reformat files|
+|`format`|Fixes formatting for all python files|
 
 ## Contributors
 
