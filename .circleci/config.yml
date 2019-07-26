@@ -24,7 +24,8 @@ jobs:
             - checkout
             - restore_cache:
                 key: deps-pip-{{ .Branch }}-{{ checksum "requirements.txt" }}
-            - run: invoke format
+            - run: echo "source ./venv/bin/activate" > $BASH_ENV
+            - run: inv format
 
     test:
         working_directory: ~/repo
