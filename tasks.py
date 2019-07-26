@@ -18,7 +18,7 @@ def get_hint(exercise):
         return "https://docs.djangoproject.com/en/2.2/ref/models/options/#django.db.models.Options.indexes"
     elif exercise == "7":
         return "https://docs.djangoproject.com/en/2.1/ref/models/querysets/#in"
-    elif(exercise == "8"):
+    elif exercise == "8":
         return "https://docs.djangoproject.com/en/2.2/ref/models/querysets/#bulk-update"
 
 

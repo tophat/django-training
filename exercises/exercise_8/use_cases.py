@@ -4,6 +4,7 @@ from exercises.models import Professor
 
 NameUpdate = Tuple[int, str]
 
+
 def update_professor_first_names(first_name_updates: List[NameUpdate]):
     """
     Updates all the professors' first names to the string specified
