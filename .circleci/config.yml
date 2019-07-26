@@ -7,7 +7,7 @@ jobs:
             - image: circleci/python:3.6
         steps:
             - checkout
-            - . script/bootstrap
+            - run: . script/bootstrap
             - run: inv format
 
     test:
