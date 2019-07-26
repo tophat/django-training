@@ -24,7 +24,7 @@ jobs:
             - checkout
             - restore_cache:
                 key: deps-pip-{{ .Branch }}-{{ checksum "requirements.txt" }}
-            - run: inv format
+            - run: invoke format
 
     test:
         working_directory: ~/repo
