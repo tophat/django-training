@@ -11,7 +11,4 @@ def add_new_professors(names: List[FullName]):
     :param names: Tuple of first and last names
     """
     for first_name, last_name in names:
-        Professor.objects.create(
-            first_name=first_name,
-            last_name=last_name,
-        )
+        Professor.objects.create(first_name=first_name, last_name=last_name)
