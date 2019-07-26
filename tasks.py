@@ -24,6 +24,9 @@ def get_hint(exercise):
 def format(ctx):
     ctx.run("black .")
 
+@task
+def lint(ctx):
+    ctx.run('black --check .')
 
 @task(
     help={
