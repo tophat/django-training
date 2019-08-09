@@ -1,5 +1,20 @@
 const fs = require('fs')
 
+function updateSidebar(sections) {
+    try {
+        const sidebarConfig = fs.readFileSync('./sidebars.json', { encoding: 'utf8' })
+        const sidebar = JSON.parse(sidebarConfig)
+
+        sections.forEach(section => {
+            sidebar.docs[section] = [section]
+        })
+
+        fs.writeFileSync('./sidebars.json', JSON.stringify(sidebar))
+    } catch(e) {
+        console.log(e)
+    }
+}
+
 function scanForSections(readmeContent) {
     const sectionMatcher = /<\!-- [A-Z_]+:START -->/g
     const matches = readmeContent.match(sectionMatcher)
@@ -43,6 +58,8 @@ function parseReadme() {
         parsedSections.forEach(({ section, content }) => {
             writeToMarkdown(section, content)
         })
+
+        updateSidebar(sections)
     } catch(e) {
         console.error(e)
     }
