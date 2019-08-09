@@ -4,6 +4,8 @@ All web apps need persist and retrieve data to be useful. You can use Django-[OR
 
 Reading through https://docs.djangoproject.com/en/2.2/topics/db/optimization/ is a good first step. This is training module contains exercises to help solidify the learnings.
 
+
+<!-- GETTING_STARTED:START -->
 ## Getting started
 - Clone this repo
 - Run `. script/bootstrap` to initialize dependencies and virtualenv (see more https://github.com/github/scripts-to-rule-them-all)
@@ -12,7 +14,9 @@ Reading through https://docs.djangoproject.com/en/2.2/topics/db/optimization/ is
 - Fix the implementation, eg `goto exercise/exercise_1/use_cases.py`
 - For a reference to documentation that will help you solve the question use `inv test 1 --hint`
 - Run the test to verify your solution, eg `inv test 1`
+<!-- GETTING_STARTED:END -->
 
+<!-- CONTRIBUTING:START -->
 ## Contributing
 
 The following invoke commands are available when contributing to this project:
@@ -21,6 +25,7 @@ The following invoke commands are available when contributing to this project:
 |---|---|
 |`lint`|Lint checks everything, does not reformat files|
 |`format`|Fixes formatting for all python files|
+
 
 ## Contributors
 
@@ -38,3 +43,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+<!-- CONTRIBUTING:END -->
