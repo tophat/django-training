@@ -32,6 +32,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/sjoanes"><img src="https://avatars3.githubusercontent.com/u/5768264?v=4" width="100px;" alt="sjoanes"/><br /><sub><b>sjoanes</b></sub></a><br /><a href="https://github.com/tophat/django-training/commits?author=sjoanes" title="Code">💻</a> <a href="#ideas-sjoanes" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/tophat/django-training/commits?author=sjoanes" title="Documentation">📖</a></td>
     <td align="center"><a href="https://mcataford.github.io"><img src="https://avatars2.githubusercontent.com/u/6210361?v=4" width="100px;" alt="Marc Cataford"/><br /><sub><b>Marc Cataford</b></sub></a><br /><a href="#infra-mcataford" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/tophat/django-training/commits?author=mcataford" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://msrose.github.io"><img src="https://avatars3.githubusercontent.com/u/3495264?v=4" width="100px;" alt="Michael Rose"/><br /><sub><b>Michael Rose</b></sub></a><br /><a href="https://github.com/tophat/django-training/commits?author=msrose" title="Code">💻</a> <a href="https://github.com/tophat/django-training/commits?author=msrose" title="Documentation">📖</a> <a href="#infra-msrose" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
