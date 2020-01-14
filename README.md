@@ -1,17 +1,53 @@
 # Django Training
 
-All web apps need persist and retrieve data to be useful. You can use Django-[ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) to access and update your persisted data. The business of retrieving and storing data can be done in multiple ways, some better than others.
+Master the Django ORM for fun and profit, by actually writing code.
 
-Reading through https://docs.djangoproject.com/en/2.2/topics/db/optimization/ is a good first step. This is training module contains exercises to help solidify the learnings.
+All web apps need to persist and retrieve data to be useful. You can use
+Django-[ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) to access
+and update your persisted data. The business of retrieving and storing data can
+be done in multiple ways; some better than others.
 
-## Getting started
-- Clone this repo
+To get familiar with the Django ORM, start by reading through
+https://docs.djangoproject.com/en/2.2/topics/db/optimization/. This project is
+a training module containing exercises that help solidify the learnings.
+
+## What is Django?
+
+Django is a popular Python framework for building web applications. You can
+learn more about Django on its [website](https://www.djangoproject.com/).
+Django comes with baked-in support for things like handling API requests and
+persisting Python model objects to the database. Django provides a
+full-featured [ORM (Object Relational
+Mapper)](https://en.wikipedia.org/wiki/Object-relational_mapping) to facilitate
+persistence to relational databases via a Python API -- that's right, no SQL
+required.
+
+The Django ORM has its pros and cons. Whether or not you like it is one
+question, but if you find yourself having to work with it, it's very important
+to understand _how_ it works:
+
+- How do I minimize the number of database queries I make?
+- When do my querysets get evaluated?
+- What does the generated SQL look like?
+
+These are just some of the questions that are important to answer to work
+effectively with Django.
+
+## What is django-training?
+
+This project aims to get you familiar with the Django ORM by going through a
+set of exercises. Each exercise gets you to try and minimize the number of
+queries made in each scenario.
+
+To go through the exercises:
+
+- Clone this repo: `git clone git@github.com:tophat/django-training.git`
 - Run `. script/bootstrap` to initialize dependencies and virtualenv (see more https://github.com/github/scripts-to-rule-them-all)
-- Go to one of the exercises, eg `cd exercise/exercise_1`
-- Run the test to see what was expected, eg `inv test --exercise=1` or `inv test 1`
-- Fix the implementation, eg `goto exercise/exercise_1/use_cases.py`
+- Go to one of the exercises, e.g. `cd exercise/exercise_1`
+- Run the test to see what was expected, e.g. `inv test --exercise=1` or `inv test 1`
+- Fix the implementation, e.g. `goto exercise/exercise_1/use_cases.py`
 - For a reference to documentation that will help you solve the question use `inv test 1 --hint`
-- Run the test to verify your solution, eg `inv test 1`
+- Run the test to verify your solution, e.g. `inv test 1`
 
 ## Contributing
 
