@@ -5,7 +5,7 @@ attrs==19.1.0
 black==19.3b0
 Click==7.0
 decorator==4.4.0
-Django==2.2.4
+Django==2.2.13
 importlib-metadata==0.18
 invoke==1.2.0
 ipython==6.2.1
