@@ -1,2 +1,4 @@
 django-training.venv/
 db.sqlite3
+.vscode*
+*.pyc
