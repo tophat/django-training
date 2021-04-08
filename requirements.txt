@@ -7,7 +7,7 @@ autopep8==1.5.4
 black==19.3b0
 Click==7.0
 decorator==4.4.0
-Django==2.2.13
+Django==2.2.20
 importlib-metadata==0.18
 iniconfig==1.1.1
 invoke==1.2.0
