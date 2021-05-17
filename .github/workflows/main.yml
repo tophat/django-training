@@ -1,0 +1,20 @@
+name: Django-Training CI
+
+on: [pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Python 
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.6
+    - name: Setup dependencies
+      run: . script/bootstrap
+    - name: Lint
+      run: |
+        source ./django-training.venv/bin/activate
+        inv lint
