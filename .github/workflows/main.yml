@@ -15,4 +15,6 @@ jobs:
     - name: Setup dependencies
       run: . script/bootstrap
     - name: Lint
-      run: inv lint
+      run: |
+        source ./django-training.venv/bin/activate
+        inv lint
