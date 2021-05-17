@@ -15,4 +15,4 @@ jobs:
     - name: Setup dependencies
       run: . script/bootstrap
     - name: Lint
-    - run: inv lint
+      run: inv lint
