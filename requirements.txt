@@ -33,7 +33,7 @@ pyparsing==2.4.7
 pytest==6.2.1
 pytest-django==4.1.0
 pytz==2017.3
-PyYAML==5.1.1
+PyYAML==5.4
 simplegeneric==0.8.1
 six==1.12.0
 sqlparse==0.3.0
