@@ -11,7 +11,7 @@ Django==2.2.13
 importlib-metadata==0.18
 iniconfig==1.1.1
 invoke==1.2.0
-ipython==6.2.1
+ipython==7.16.3
 ipython-genutils==0.2.0
 isort==5.6.4
 jedi==0.14.0
