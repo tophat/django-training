@@ -1,5 +1,7 @@
 # Django Training
 
+> # :warning: This material is archived and will not receive further updates. For the latest information on Django's ORM, it is advised to look at [the available framework documentation](https://docs.djangoproject.com/en/4.1/topics/db/).
+
 Master the Django ORM for fun and profit, by actually writing code.
 
 All web apps need to persist and retrieve data to be useful. You can use
